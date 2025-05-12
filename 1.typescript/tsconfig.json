@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "outDir": "./dist",         // nơi lưu file js sau khi biên dịch
+    "rootDir": ".",             // thư mục gốc (chính là 1.typescript)
+    "strict": true
+  },
+  "include": ["./**/*"]
+}
+
