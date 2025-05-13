@@ -1,0 +1,4 @@
+Luồng chạy của ReactJS:
+1. Khởi tạo App trong index.js
+2. React đọc các components trong App.js và chuyển nó thành Virtual DOM
+3. React so sánh cây virtual DOM với DOM thật sau đó gắn phần tử vào DOM thật
