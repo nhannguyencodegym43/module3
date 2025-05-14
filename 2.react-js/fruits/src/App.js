@@ -1,6 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
 import React from 'react';
+// import Example1 from './components/example1';
+// import Example2 from "./components/example2";
+// import Example3 from './components/example3';
+import Example4 from "./components/example4";
 
 function App() {
     const fruits = ["Apple", "Banana", "Orange", "Apricot", "Black rowan", "Cranberry"];
@@ -17,6 +21,10 @@ function App() {
               }
           </ul>
       </header>
+        {/*<Example1 />*/}
+        {/*<Example2 />*/}
+        {/*<Example3 />*/}
+        <Example4 />
     </div>
   );
 }
