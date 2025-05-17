@@ -1,0 +1,9 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.registration_form {
+    width: 400px;
+    margin: 10px auto;
+}

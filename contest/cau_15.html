@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Đăng Ký</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #e6d699;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .register-form {
+            background: #afc1e6;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            width: 350px;
+        }
+
+        .register-form h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .input-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+            background: #f9f9f9;
+            gap: 10px; /* Tạo khoảng cách giữa icon và input */
+
+        }
+
+        .input-group i {
+            margin-right: 10px;
+            color: #2466b1; /* Icon màu xanh */
+        }
+
+        .input-group input {
+            border: none;
+            background: transparent;
+            outline: none;
+            width: 100%;
+            font-size: 16px;
+            color: #2466b1; /* Text nhập vào cũng màu xanh */
+        }
+
+        /* Placeholder text màu xanh */
+        .input-group input::placeholder {
+            color: #2466b1;
+        }
+
+        .register-btn {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            background-color: #2466b1;
+            color: white;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .register-btn:hover {
+            background-color: #5876ff;
+        }
+        .input-group input::placeholder {
+            color: #2466b1;
+            font-weight: bold; /* In đậm placeholder */
+        }
+        .vertical-line {
+            width: 2px;
+            background-color: #2466b1;
+            align-self: stretch;
+        }
+
+    </style>
+</head>
+<body>
+<form class="register-form">
+    <div class="input-group">
+        <i class="fa fa-user"></i>
+        <div class="vertical-line"></div>
+        <input type="text" placeholder="Name" required>
+    </div>
+
+    <div class="input-group">
+        <i class="fa fa-envelope"></i>
+        <div class="vertical-line"></div>
+        <input type="email" placeholder="Email ID" required>
+    </div>
+
+    <div class="input-group">
+        <i class="fa fa-phone"></i>
+        <div class="vertical-line"></div>
+        <input type="tel" placeholder="Phone" required>
+    </div>
+
+    <div class="input-group">
+        <i class="fa fa-lock"></i>
+        <div class="vertical-line"></div>
+        <input type="password" placeholder="Set Password" required>
+    </div>
+
+    <button type="submit" class="register-btn">REGISTER</button>
+</form>
+</body>
+</html>

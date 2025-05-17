@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Form Tìm Kiếm</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .search-container {
+            background-color: #007BFF;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .search-box {
+            position: relative;
+            width: 300px;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 10px 40px 10px 15px; /* chừa bên phải để chứa icon */
+            border: none;
+            border-radius: 20px;
+            font-size: 16px;
+        }
+
+        .search-box input::placeholder {
+            color: #aaa;
+        }
+
+        .search-box .icon {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 18px;
+            color: #007BFF;
+            pointer-events: none;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<div class="search-container">
+    <div class="search-box">
+        <input type="text" placeholder="Tìm kiếm bài viết...">
+        <i class="fas fa-search icon"></i>
+    </div>
+</div>
+
+</body>
+</html>

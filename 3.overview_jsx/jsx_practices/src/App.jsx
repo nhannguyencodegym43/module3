@@ -19,9 +19,15 @@ import Bai17 from "./components/bai17.jsx";
 import Bai18 from "./components/bai18.jsx";
 import Bai19 from "./components/bai19.jsx";
 import Bai20 from "./components/bai20.jsx";
+import Bai21 from "./components/bai21.jsx";
 
 function App() {
-
+const title = "This is the title";
+const description = "This is the description";
+const menuInfo = {
+  title: "About Us",
+  description: "This is the description of Menu",
+}
   return (
     <>
       <Bai1 />
@@ -44,6 +50,7 @@ function App() {
         <Bai18 />
         <Bai19 />
         <Bai20 />
+      <Bai21 menuInfomation={menuInfo} />
     </>
   )
 }

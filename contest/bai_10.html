@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popup Xin chào</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 40vh;
+            background-color: #f0f0f0; /* nền tổng thể sáng */
+        }
+
+        .background-box {
+            background-color: #4a4a4a;
+            padding: 40px;
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .popup-container {
+            width: 320px;
+            max-height: 200px;
+            background-color: white;
+            border-radius: 20px;
+            padding: 20px;
+            position: relative;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        .popup-container h2 {
+            margin: 0;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .popup-container p {
+            margin-top: 12px;
+            font-size: 14px;
+            color: #444;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 12px;
+            background: none;
+            border: none;
+            color: red;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="background-box">
+    <div class="popup-container" id="popup">
+        <button class="close-btn" onclick="document.getElementById('popup').style.display='none'">✖</button>
+        <h2>Xin chào</h2>
+        <p>Cảm ơn bạn đã ghé thăm trang web của mình, chúc bạn một ngày mới vui vẻ và tràn đầy hạnh phúc!</p>
+    </div>
+</div>
+
+</body>
+</html>

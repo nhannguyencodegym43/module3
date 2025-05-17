@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Section</title>
+  <style>
+    /* Reset cơ bản */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Times New Roman', serif;
+      background-color: #333333; /* nền tối */
+      color: white;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center; /* căn giữa dọc cho container */
+      align-items: center;     /* căn giữa ngang */
+    }
+
+    .container {
+      background-color: #2b2b2b; /* màu nền khối */
+      padding: 40px 60px;
+      width: 700px; /* tăng rộng container */
+      box-shadow: 0 0 15px rgba(0,0,0,0.7);
+      border-radius: 4px;
+      text-align: left;
+    }
+
+    /* Tiêu đề chính */
+    .title {
+      font-size: 60px;
+      font-weight: normal;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+      font-family: 'Times New Roman', serif;
+    }
+
+    /* Phụ đề (sub-title) */
+    .subtitle {
+      flex: 1; /* Chiếm 1 phần */
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 1.2;
+      padding-right: 20px; /* thêm không gian bên phải */
+      font-family: 'Times New Roman', serif;
+    }
+
+    /* Đoạn mô tả */
+    .description {
+      flex: 1.5; /* Chiếm phần lớn hơn bên phải */
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 1.5;
+      margin-bottom: 20px;
+      font-family: 'Times New Roman', serif;
+      max-width: 100%; /* rộng hết phần phải */
+    }
+
+    /* Nút READ MORE */
+    .btn-readmore {
+      align-self: flex-start; /* nút sát bên trái trong right-side */
+      border: 1px solid white;
+      padding: 8px 18px;
+      font-size: 13px;
+      font-weight: 400;
+      letter-spacing: 1.5px;
+      color: white;
+      background: transparent;
+      cursor: pointer;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      font-family: 'Times New Roman', serif;
+      text-transform: uppercase;
+    }
+    .btn-readmore:hover {
+      background-color: white;
+      color: #2b2b2b;
+    }
+
+    .content-wrapper {
+      display: flex;
+      justify-content: space-between; /* Cách đều 2 bên trái và phải */
+      align-items: flex-start; /* Canh đầu dòng */
+      gap: 40px; /* Khoảng cách giữa 2 cột */
+    }
+
+    .right-side {
+      display: flex;
+      flex-direction: column;
+      flex: 1.5;
+    }
+
+    /* Footer credit ngoài container */
+    footer {
+      font-size: 10px;
+      font-style: italic;
+      color: white; /* màu chữ nâu */
+      margin-top: 30px;
+      text-align: center;
+      width: 100%;
+      user-select: none;
+      background-color: #5C3A21; /* nền nâu */
+      padding: 10px 0;
+      /* position: fixed;
+      bottom: 0;
+      left: 0; */
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="title">about</div>
+  <div class="content-wrapper">
+    <div class="subtitle">
+      harness multimedia <br />
+      based collaboration
+    </div>
+    <div class="right-side">
+      <div class="description">
+        Quality recommendations based on <br />
+        business leadership and strong <br />
+        professional execution, helping <br />
+        businesses adopt market- <br />
+        leading digital projects. <br />
+        Performance based partnerships to <br />
+        grow revenue and margin.
+      </div>
+      <button class="btn-readmore">READ MORE</button>
+    </div>
+  </div>
+</div>
+
+<footer>
+  Licensed under the Creative Commons
+</footer>
+</body>
+</html>

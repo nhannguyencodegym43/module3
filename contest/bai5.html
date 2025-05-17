@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Select Your Subject</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 40px;
+      text-align: center;
+    }
+
+    .form-container {
+      max-width: 400px;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    fieldset {
+      border: 1px solid #ccc;
+      padding: 20px;
+      border-radius: 2px;
+    }
+
+    legend {
+      font-weight: bold;
+      padding: 0 10px;
+    }
+
+    .checkbox-group {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    /* Hide the default checkbox */
+    input[type="checkbox"] {
+      display: none;
+    }
+
+    /* Custom checkbox style */
+    label {
+      position: relative;
+      padding-left: 30px;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    label::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 2px;
+      width: 20px;
+      height: 20px;
+      border: 2px solid #aaa;
+      border-radius: 4px;
+      background-color: white;
+    }
+
+    input[type="checkbox"]:checked + label::before {
+      background-color: gray;
+      border-color: gray;
+    }
+
+    /* Optional: checkmark */
+    input[type="checkbox"]:checked + label::after {
+      content: "✔";
+      position: absolute;
+      left: 4px;
+      top: 0px;
+      font-size: 16px;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+<div class="form-container">
+  <form>
+    <fieldset>
+      <legend>Select your subject</legend>
+      <div class="checkbox-group">
+        <div>
+          <input type="checkbox" id="html" name="subject" value="HTML">
+          <label for="html">HTML</label>
+        </div>
+        <div>
+          <input type="checkbox" id="css" name="subject" value="CSS">
+          <label for="css">CSS</label>
+        </div>
+        <div>
+          <input type="checkbox" id="js" name="subject" value="JavaScript">
+          <label for="js">JavaScript</label>
+        </div>
+      </div>
+    </fieldset>
+  </form>
+</div>
+
+</body>
+</html>

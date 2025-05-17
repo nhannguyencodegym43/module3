@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Giao Diện Hình Chữ Nhật</title>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+    }
+
+    body {
+        background-color: #f5f5f5;
+        padding: 10px;
+    }
+
+    .rectangle {
+        border: 2px solid #333;
+        background-color: #e0e0e0;
+        margin-bottom: 10px;
+        text-align: center;
+        line-height: 1.5;
+        font-weight: bold;
+    }
+
+    .header {
+        height: 90px;
+        line-height: 90px;
+    }
+
+    .nav {
+        height: 30px;
+        line-height: 30px;
+        font-size: 12px;
+    }
+
+    .body-container {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 10px;
+        height: 300px;
+    }
+
+    .content {
+        flex: 2;
+        line-height: 300px;
+    }
+
+    .sidebar {
+        flex: 1;
+        line-height: 300px;
+    }
+
+    .footer {
+        height: 80px;
+        line-height: 80px;
+    }
+</style>
+<body>
+<div class="rectangle header">HEADER</div>
+<div class="rectangle nav">NAVIGATION</div>
+
+<div class="body-container">
+    <div class="rectangle content">CONTENT</div>
+    <div class="rectangle sidebar">SIDEBAR</div>
+</div>
+
+<div class="rectangle footer">FOOTER</div>
+</body>
+</html>
