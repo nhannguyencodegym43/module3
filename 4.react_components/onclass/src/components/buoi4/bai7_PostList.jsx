@@ -1,4 +1,5 @@
 import React from "react";
+import Bai7_PostItem from "./bai7_PostItem.jsx";
 function Bai7_PostList() {
     const arr = [
         {
@@ -19,7 +20,15 @@ function Bai7_PostList() {
     ]
     return (
         <>
-
+            <ul>
+                {
+                    arr.map((item, index) => (
+                        <li key={index}>
+                            <Bai7_PostItem title={item.title} date={item.date} excerpt={item.excerpt} />
+                        </li>
+                    ))
+                }
+            </ul>
         </>
     )
 }
