@@ -1,8 +1,8 @@
 import React from "react";
-function Bai4() {
+function Bai4({message = "Xin chào!"}) {
     return (
         <>
-            <p>Xin chào!</p>
+            <p>{message}</p>
         </>
     )
 }
