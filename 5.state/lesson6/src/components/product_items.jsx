@@ -6,8 +6,8 @@ function ProductItems(props) {
                 {props.products.map((product) => (
                     <li key={product.id}>
                         {product.name}: {product.quantity}
-                        <button onClick={() => props.onQuantityAdd(product.id)}>+</button>
-                        <button onClick={() => props.onQuantitySubtract(product.id)}>-</button>
+                        <button onClick={() => props.onQuantity(product.id, 1)}>+</button>
+                        <button onClick={() => props.onQuantity(product.id, -1)} disabled={product.quantity === 0}>-</button>
                     </li>
                 ))}
             </ul>

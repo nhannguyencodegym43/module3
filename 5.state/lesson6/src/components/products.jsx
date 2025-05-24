@@ -18,24 +18,17 @@ function Products() {
             quantity: 3,
         }
     ])
-    function addQuantity(id) {
+    function handleQuantity(id, delta) {
         setProducts(
             (previous) => previous.map(
-                (product) => product.id === id ? {...product, quantity:product.quantity + 1} : product
-            )
-        )
-    }
-    function subtractQuantity(id) {
-        setProducts(
-            (previous) => previous.map(
-                (product) => product.id === id ? {...product, quantity:product.quantity - 1} : product
+                (product) => product.id === id ? {...product, quantity:product.quantity + delta} : product
             )
         )
     }
     return (
         <>
             <h1>Quản lý sản phẩm</h1>
-            <ProductItems onQuantityAdd={addQuantity} onQuantitySubtract={subtractQuantity} products={products} />
+            <ProductItems onQuantity={handleQuantity} products={products} />
         </>
     )
 }
