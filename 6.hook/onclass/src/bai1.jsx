@@ -8,9 +8,12 @@ function Bai1() {
     const [selectedUsers, setSelectedUsers] = React.useState(null);
     const [isOnline, setIsOnline] = React.useState(false);
     useEffect(() => {
-        const time = setInterval(() => {
-            setIsOnline(Math.random > 0.5);
-        })
+        const time = setTimeout(() => {
+            setIsOnline(Math.random() > 0.5);
+        }, 1000)
+        return () => {
+            clearTimeout(time);
+        }
     }, []);
     return (
         <>
@@ -22,10 +25,15 @@ function Bai1() {
                     </li>
                 ))}
             </ul>
-            <h1>Selected Users</h1>
-            {selectedUsers && {
-
-            }}
+            {selectedUsers && (
+                <div>
+                    <h2>Trạng thái của {selectedUsers.name}</h2>
+                    <p>
+                        {isOnline ? "Đang online" : "Đang offline"}
+                    </p>
+                </div>
+                )
+            }
         </>
     )
 }
