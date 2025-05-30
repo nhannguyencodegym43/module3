@@ -1,4 +1,5 @@
 import React, {useEffect} from "react";
+import Question from "./question.jsx";
 function QuizApp() {
     const questions = [
         {
@@ -35,11 +36,7 @@ function QuizApp() {
             clearInterval(chooseQuestion);
         }
     });
-    let buttonsGroup = {
-        display: "flex",
-        justifyContent: "space-between",
-        flexDirection: "row",
-    }
+
     function checkAnswer(answer) {
         if (answer === currentRes) {
             alert("Your answer is correct!")
@@ -49,13 +46,7 @@ function QuizApp() {
     }
     return (
         <>
-            <h2>Question</h2>
-            {currentQuestion}
-            <div style={buttonsGroup}>
-                {currentOptions.map((option, i) => (
-                    <button key={i} value={option} onClick={(e) => {checkAnswer(e.currentTarget.value)}}>{option}</button>
-                ))}
-            </div>
+           <Question currentQuestion={currentQuestion} currentOptions={currentOptions} checkAnswer={checkAnswer} />
         </>
     )
 }

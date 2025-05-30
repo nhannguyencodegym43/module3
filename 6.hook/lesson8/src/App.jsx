@@ -7,6 +7,8 @@ import Colors from "./bai5/colors.jsx";
 import BookList from "./bai6/book_list.jsx";
 import TempTransfer from "./bai7/temp_transfer.jsx";
 import QuizApp from "./bai8/quiz_app.jsx";
+import Products from "./bai9/products.jsx";
+import TimerGame from "./bai10/timer_game.jsx";
 
 function App() {
 
@@ -20,6 +22,8 @@ function App() {
             <BookList />
             <TempTransfer />
             <QuizApp />
+            <Products />
+            <TimerGame />
         </>
     )
 }

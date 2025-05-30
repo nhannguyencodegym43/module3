@@ -1,4 +1,5 @@
 import React, {useEffect} from "react";
+import TodoList from "./todo_list.jsx";
 function TodoApp() {
     const [tasks, setTasks] = React.useState([]);
     const [newTask, setNewTask] = React.useState("");
@@ -16,18 +17,7 @@ function TodoApp() {
     }, [tasks]);
     return (
         <>
-            <h1>To-do List</h1>
-            <ul>
-                {tasks.map((task, i) => (
-                    <li key={i}>
-                        {task}
-                    </li>
-                ))}
-            </ul>
-            <form onSubmit={addTask}>
-                <input type="text" placeholder="Add a task" value={newTask} onChange={(e) => setNewTask(e.target.value)}/>
-                <button type="submit">Add</button>
-            </form>
+            <TodoList tasks={tasks} addTask={addTask} newTask={newTask} setNewTask={setNewTask} />
         </>
     )
 }

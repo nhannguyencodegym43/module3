@@ -1,4 +1,5 @@
 import React, {useEffect} from "react";
+import BookDetail from "./book_detail.jsx";
 function BookList() {
     const books = [
         {
@@ -31,7 +32,7 @@ function BookList() {
     const [showWarning, setShowWarning] = React.useState(false);
     const [warning] = React.useState("This book has low rating!");
     useEffect(() => {
-        if (rate < 3) {
+        if (rate < 3 && rate > 0) {
             setShowWarning(true);
         } else {
             setShowWarning(false);
@@ -47,13 +48,7 @@ function BookList() {
                     </li>
                 ))}
             </ul>
-            <h2>Book detail</h2>
-            {showDetail && (
-                <p>{detail}</p>
-            )}
-            {showWarning && (
-                <p>{warning}</p>
-            )}
+            <BookDetail showDetail={showDetail} detail={detail} showWarning={showWarning} warning={warning} />
         </>
     )
 }
