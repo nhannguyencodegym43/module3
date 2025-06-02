@@ -10,10 +10,8 @@ function Colors() {
     }
     return (
         <>
-            <body style={style}>
-            <h1>Color picker</h1>
+            <h1 style={style}>Color picker</h1>
             <ColorPicker handleColor={handleColor}/>
-            </body>
         </>
     )
 }

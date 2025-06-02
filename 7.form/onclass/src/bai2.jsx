@@ -6,12 +6,18 @@ function Bai2() {
         age: 0,
         parentName: "",
         address: "",
-        giftType: ""
+        giftType: "",
+        gender: "",
+        agree: false
     });
 
     function handleChange(e) {
-        const {name, value} = e.target;
-        setFormData(prev => ({...prev, [name]: value}));
+        const {name, value, type, checked} = e.target;
+        if (type === 'checkbox') {
+            setFormData(prev => ({ ...prev, [name]: checked }));
+        } else {
+            setFormData(prev => ({ ...prev, [name]: value }));
+        }
     }
     const [errors, setErrors] = React.useState({});
     function handleSubmit(e) {
@@ -48,6 +54,15 @@ function Bai2() {
                     <p style={{color: "red"}}>{errors.childName}</p>
                 )}
                 <div>
+                    <label>
+                        <input type="radio" name="gender" value={formData.gender} onChange={(e) => handleChange(e)} checked={formData.gender === "Nam"} />Nam
+                    </label>
+                    <label>
+                        <input type="radio" name="gender" value={formData.gender} onChange={(e) => handleChange(e)} checked={formData.gender === "Nam"} />Nữ
+                    </label>
+                </div>
+                <br />
+                <div>
                     <input type="number" name="age" value={formData.age} placeholder="Type child's age..." onChange={(e) => handleChange(e)}/>
                 </div>
                 <br />
@@ -80,6 +95,11 @@ function Bai2() {
                 {errors.giftType && (
                     <p style={{color: "red"}}>{errors.giftType}</p>
                 )}
+                <div>
+                    <label>
+                        <input type="checkbox" value={formData.agree} name={formData.agree} onChange={(e) => handleChange(e)} checked={formData.agree} />Tích vào để đồng ý nhận quà
+                    </label>
+                </div>
                 <button type="submit">Gửi</button>
             </form>
         </>
