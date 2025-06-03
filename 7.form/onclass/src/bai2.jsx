@@ -55,10 +55,10 @@ function Bai2() {
                 )}
                 <div>
                     <label>
-                        <input type="radio" name="gender" value={formData.gender} onChange={(e) => handleChange(e)} checked={formData.gender === "Nam"} />Nam
+                        <input type="radio" name="gender" value="Nam" onChange={(e) => handleChange(e)} checked={formData.gender === "Nam"} />Nam
                     </label>
                     <label>
-                        <input type="radio" name="gender" value={formData.gender} onChange={(e) => handleChange(e)} checked={formData.gender === "Nam"} />Nữ
+                        <input type="radio" name="gender" value="Nữ" onChange={(e) => handleChange(e)} checked={formData.gender === "Nữ"} />Nữ
                     </label>
                 </div>
                 <br />
@@ -97,7 +97,7 @@ function Bai2() {
                 )}
                 <div>
                     <label>
-                        <input type="checkbox" value={formData.agree} name={formData.agree} onChange={(e) => handleChange(e)} checked={formData.agree} />Tích vào để đồng ý nhận quà
+                        <input type="checkbox" name="agree" onChange={(e) => handleChange(e)} checked={formData.agree} />Tích vào để đồng ý nhận quà
                     </label>
                 </div>
                 <button type="submit">Gửi</button>
