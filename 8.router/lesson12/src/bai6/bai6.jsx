@@ -4,10 +4,11 @@ import Me from "./me.jsx";
 import Nguyen from "./nguyen.jsx";
 import Trung from "./trung.jsx";
 import Nhan from "./nhan.jsx";
+import Header from "./header.jsx";
 function Bai6() {
     return (
         <>
-            <h2>Đây là header</h2>
+            <Header />
             <NavLink to="/me">Đây là tôi</NavLink>
             <Routes>
                 <Route path="/me" element={<Me />}>
@@ -16,8 +17,12 @@ function Bai6() {
                     <Route path="/me/nhan" element={<Nhan />}/>
                 </Route>
             </Routes>
-            <h2>Đây là footer</h2>
+            <footer className="py-3 my-4 border-top">
+                <p className="text-center text-muted">© 2025 Nhân Company, Inc</p>
+            </footer>
+
         </>
     )
 }
+
 export default Bai6;

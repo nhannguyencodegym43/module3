@@ -9,8 +9,8 @@ function Bai5() {
         <>
             <h1>Active Link Highlight</h1>
             <nav>
-                <NavLink to="/nguyen" className={({isActive}) => (isActive ? "active-link" : "")}>Nguyen</NavLink> |
-                <NavLink to="/trung" className={({isActive}) => (isActive ? "active-link" : "")}>Trung</NavLink> |
+                <NavLink to="/nguyen" className={({isActive}) => (isActive ? "active-link" : "")}>Nguyen</NavLink> | {" "}
+                <NavLink to="/trung" className={({isActive}) => (isActive ? "active-link" : "")}>Trung</NavLink> | {" "}
                 <NavLink to="/nhan" className={({isActive}) => (isActive ? "active-link" : "")}>Nhan</NavLink>
             </nav>
             <Routes>
