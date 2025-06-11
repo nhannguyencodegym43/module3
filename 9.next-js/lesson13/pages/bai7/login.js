@@ -11,7 +11,7 @@ export default function LoginPage() {
         if (!(username.trim())) {
             alert("Please enter username!");
         } else {
-            router.push('/bai1/products');
+            router.push('/bai7/study_tasks');
         }
     }
 
@@ -21,7 +21,7 @@ export default function LoginPage() {
             <form onSubmit={handleSubmit}>
                 <input type="text" name="username" placeholder="Username..." value={username}
                        onChange={e => setUsername(e.target.value)}/>
-                <button type="submit" style={{marginLeft: "1rem"}}>Submit</button>
+                <button type="submit">Submit</button>
             </form>
         </>
     )

@@ -4,12 +4,7 @@ import {useRouter} from "next/router";
 import AddProduct from "./add_product";
 
 export default function Products() {
-    const [products, setProducts] = useState([{
-        id: 0,
-        name: "",
-        description: "",
-        price: 0,
-    }]);
+    const [products, setProducts] = useState([]);
     const [showAdd, setShowAdd] = useState(false);
     return (
         <>

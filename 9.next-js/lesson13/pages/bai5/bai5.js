@@ -1,9 +1,9 @@
 import LoginPage from "./login";
 
-export default function Bai3 () {
+export default function Bai5 () {
     return (
         <>
-            <h1>Bài 3 - Contact List</h1>
+            <h1>Bài 5 - Note taking</h1>
             <LoginPage />
         </>
     )

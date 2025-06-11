@@ -11,7 +11,7 @@ export default function LoginPage() {
         if (!(username.trim())) {
             alert("Please enter username!");
         } else {
-            router.push('/bai1/products');
+            router.push('/bai6/books');
         }
     }
 

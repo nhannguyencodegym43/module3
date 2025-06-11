@@ -23,11 +23,11 @@ export default function AddProduct({setProducts, products}) {
         <>
             <form onSubmit={handleSubmit}>
                 <input type="text" name="name" placeholder="Product Name" value={product.name}
-                       onChange={(e) => handleChange(e)}/>
+                       onChange={(e) => handleChange(e)}/> <br/>
                 <input type="text" name="description" placeholder="Description" value={product.description}
-                       onChange={(e) => handleChange(e)}/>
+                       onChange={(e) => handleChange(e)}/> <br/>
                 <input type="number" name="price" placeholder="Price" value={product.price}
-                       onChange={(e) => handleChange(e)}/>
+                       onChange={(e) => handleChange(e)}/> <br/>
                 <button type="submit">Add</button>
             </form>
         </>
