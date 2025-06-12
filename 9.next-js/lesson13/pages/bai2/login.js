@@ -7,10 +7,10 @@ export default function LoginPage() {
 
     function handleSubmit(e) {
         e.preventDefault();
-        localStorage.setItem('username', username);
         if (!(username.trim())) {
             alert("Please enter username!");
         } else {
+            localStorage.setItem('username', username);
             router.push('/bai2/tasks');
         }
     }
@@ -21,7 +21,7 @@ export default function LoginPage() {
             <form onSubmit={handleSubmit}>
                 <input type="text" name="username" placeholder="Username..." value={username}
                        onChange={e => setUsername(e.target.value)}/>
-                <button type="submit">Submit</button>
+                <button type="submit" style={{marginLeft: "1rem"}}>Submit</button>
             </form>
         </>
     )

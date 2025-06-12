@@ -28,7 +28,7 @@ export default function AddProduct({setProducts, products}) {
                        onChange={(e) => handleChange(e)}/> <br/>
                 <input type="number" name="price" placeholder="Price" value={product.price}
                        onChange={(e) => handleChange(e)}/> <br/>
-                <button type="submit">Add</button>
+                <button type="submit" style={{marginTop: "1rem"}}>Add</button>
             </form>
         </>
     )

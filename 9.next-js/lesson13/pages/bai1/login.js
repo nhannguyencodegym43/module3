@@ -7,10 +7,10 @@ export default function LoginPage() {
 
     function handleSubmit(e) {
         e.preventDefault();
-        localStorage.setItem('username', username);
         if (!(username.trim())) {
             alert("Please enter username!");
         } else {
+            localStorage.setItem('username', username);
             router.push('/bai1/products');
         }
     }

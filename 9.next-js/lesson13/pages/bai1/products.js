@@ -1,6 +1,5 @@
 import {useState} from "react";
 import Link from "next/link";
-import {useRouter} from "next/router";
 import AddProduct from "./add_product";
 
 export default function Products() {
