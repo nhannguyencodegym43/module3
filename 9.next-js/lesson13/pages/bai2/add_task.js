@@ -1,7 +1,6 @@
 import {useState} from "react";
 
 export default function AddTask({setTasks, tasks}) {
-    const [taskId, setTaskId] = useState(1);
     const [title, setTitle] = useState("");
 
     function handleChange(e) {
@@ -10,14 +9,14 @@ export default function AddTask({setTasks, tasks}) {
 
     function handleSubmit(e) {
         e.preventDefault();
+        const taskId = tasks.length > 0 ? Math.max(...tasks.map(t => t.id)) : 0;
         const newTask = {
-            id: taskId,
+            id: taskId + 1,
             title: title,
             status: false
         }
         setTasks([newTask, ...tasks]);
         localStorage.setItem("tasks", JSON.stringify([newTask, ...tasks]));
-        setTaskId(prev => prev + 1);
         setTitle("");
     }
 

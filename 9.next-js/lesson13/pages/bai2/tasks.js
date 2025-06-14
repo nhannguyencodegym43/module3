@@ -18,7 +18,6 @@ export default function Tasks () {
     }
     function handleEdit (id) {
         const products = JSON.parse(localStorage.getItem("products") || "[]");
-        const product = products[id];
     }
     return (
         <>
@@ -32,7 +31,7 @@ export default function Tasks () {
                         <th>ID</th>
                         <th>Title</th>
                         <th>Status</th>
-                        <th>Actions</th>
+                        <th colSpan={2}>Actions</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -41,8 +40,8 @@ export default function Tasks () {
                             <td>{task.id}</td>
                             <td><Link href={`/bai2/tasks/${task.id}`}>{task.title}</Link></td>
                             <td><input type="checkbox" checked={task.status === true} name="status" onChange={(e) => handleChange(task.id, e.target.checked)}/></td>
-                            <td onClick={() => handleEdit(task.id)}>Edit</td>
-                            <td>Delete</td>
+                            <td> <button onClick={() => handleEdit(task.id)}>Edit</button></td>
+                            <td><button>Delete</button></td>
                         </tr>
                     ))}
                 </tbody>
