@@ -26,11 +26,12 @@ export default function Edit () {
         const products = JSON.parse(localStorage.getItem("products") || "[]");
         const idx = products.findIndex((product) => product.id.toString() === id);
         if (idx !== -1) {
-            products[idx] = {...product, id: products[idx].id };
+            products[idx] = {...product, price: Number(product.price) };
             localStorage.setItem("products", JSON.stringify(products));
         }
         router.push('/bai1/products');
     }
+    if (!product || !product.id) return <p>Product not found...</p>
     return (
         <>
             <h2>Edit the product</h2>

@@ -1,9 +1,11 @@
 import {useEffect, useState} from "react";
 import AddTask from "./add_task";
 import Link from "next/link";
+import {useRouter} from "next/router";
 
 export default function Tasks () {
     const [tasks, setTasks] = useState([]);
+    const router = useRouter();
     useEffect(() => {
         const savedTasks = JSON.parse(localStorage.getItem("tasks") || "[]");
         setTasks(Array.isArray(savedTasks) ? savedTasks : []);
@@ -17,7 +19,18 @@ export default function Tasks () {
         setTasks(prev => prev.map(task => task.id === id ? {...task, status: checked} : task));
     }
     function handleEdit (id) {
-        const products = JSON.parse(localStorage.getItem("products") || "[]");
+        router.push(`/bai2/edit/${id}`);
+    }
+    function handleDelete(id) {
+        const confirmDelete = confirm("Are you sure?");
+        if (confirmDelete) {
+            const idx = tasks.findIndex((task) => task.id.toString() === id.toString());
+            if (idx !== -1) {
+                const updatedTasks = [...tasks];
+                updatedTasks.splice(idx, 1);
+                setTasks(updatedTasks);
+            }
+        }
     }
     return (
         <>
@@ -40,8 +53,8 @@ export default function Tasks () {
                             <td>{task.id}</td>
                             <td><Link href={`/bai2/tasks/${task.id}`}>{task.title}</Link></td>
                             <td><input type="checkbox" checked={task.status === true} name="status" onChange={(e) => handleChange(task.id, e.target.checked)}/></td>
-                            <td> <button onClick={() => handleEdit(task.id)}>Edit</button></td>
-                            <td><button>Delete</button></td>
+                            <td><button onClick={() => handleEdit(task.id)}>Edit</button></td>
+                            <td><button onClick={() => handleDelete(task.id)}>Delete</button></td>
                         </tr>
                     ))}
                 </tbody>

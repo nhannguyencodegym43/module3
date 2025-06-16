@@ -16,7 +16,6 @@ export default function AddTask({setTasks, tasks}) {
             status: false
         }
         setTasks([newTask, ...tasks]);
-        localStorage.setItem("tasks", JSON.stringify([newTask, ...tasks]));
         setTitle("");
     }
 
