@@ -1,0 +1,28 @@
+{
+  "products": [
+    {
+      "id": "2",
+      "name": "Iphone 13promax",
+      "price": 1000,
+      "description": "Apple store"
+    },
+    {
+      "id": "3",
+      "name": "Iphone 12promax",
+      "price": 800,
+      "description": "Apple store"
+    },
+    {
+      "id": "4",
+      "name": "Iphone 11promax",
+      "price": 500,
+      "description": "Apple store"
+    },
+    {
+      "id": "5",
+      "name": "Iphone 15promax",
+      "price": 2000,
+      "description": "New Seal VN/A"
+    }
+  ]
+}

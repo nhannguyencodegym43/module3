@@ -13,7 +13,7 @@ export default function Edit() {
         if (id !== undefined) {
             const savedTasks = JSON.parse(localStorage.getItem("tasks") || "[]");
             const foundTask = savedTasks.find((task) => task.id.toString() === id);
-            setTask(foundTask);
+            if (foundTask) setTask(foundTask);
         }
     }, [id])
     function handleChange(e){

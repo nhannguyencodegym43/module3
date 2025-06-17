@@ -23,7 +23,6 @@ export default function AddStudyTask({setStudyTasks, studyTasks}) {
             notes: formData.notes,
         }
         setStudyTasks([newStudyTask, ...studyTasks]);
-        localStorage.setItem("studyTasks", JSON.stringify([newStudyTask, ...studyTasks]));
         setFormData({title: "", status: "", notes: ""});
     }
 

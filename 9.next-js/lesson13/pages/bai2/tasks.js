@@ -5,6 +5,7 @@ import {useRouter} from "next/router";
 
 export default function Tasks () {
     const [tasks, setTasks] = useState([]);
+    const [searchItem, setSearchItem] = useState("");
     const router = useRouter();
     useEffect(() => {
         const savedTasks = JSON.parse(localStorage.getItem("tasks") || "[]");
@@ -32,12 +33,14 @@ export default function Tasks () {
             }
         }
     }
+    const filteredTasks = searchItem ? tasks.filter((task) => task.title.toLowerCase().includes(searchItem.toLowerCase())) : tasks;
     return (
         <>
             <h2>Task Manager</h2>
             {showAddTask && (
                 <AddTask tasks={tasks} setTasks={setTasks} />
             )}
+            <input type="text" name="filtered" placeholder="Type the tasks you want to find..." value={searchItem} onChange={(e) => setSearchItem(e.target.value)} />
             <table border="1" style={{marginTop: "1rem"}}>
                 <thead>
                     <tr>
@@ -48,7 +51,7 @@ export default function Tasks () {
                     </tr>
                 </thead>
                 <tbody>
-                    {tasks.map((task) => (
+                    {filteredTasks.map((task) => (
                         <tr key={task.id}>
                             <td>{task.id}</td>
                             <td><Link href={`/bai2/tasks/${task.id}`}>{task.title}</Link></td>

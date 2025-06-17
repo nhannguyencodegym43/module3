@@ -1,0 +1,28 @@
+{
+  "students": [
+    {
+      "id": "1",
+      "name": "Nguyen Van A",
+      "age": 20,
+      "major": "Computer Science"
+    },
+    {
+      "id": "2",
+      "name": "Tran Thi B",
+      "age": 22,
+      "major": "Information Technology"
+    },
+    {
+      "id": "3",
+      "name": "Le Van C",
+      "age": 21,
+      "major": "Software Engineering"
+    },
+    {
+      "id": "4",
+      "name": "Pham Thi D",
+      "age": 23,
+      "major": "Data Science"
+    }
+  ]
+}

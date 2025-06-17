@@ -1,7 +1,6 @@
 import {useState} from "react";
 
 export default function AddContact({setContacts, contacts}) {
-    const [contactId, setContactId] = useState(1);
     const [formData, setFormData] = useState({
         name: "",
         email: "",
@@ -18,16 +17,16 @@ export default function AddContact({setContacts, contacts}) {
         const emailRegex = /^[a-zA-Z0-9+]+@[a-zA-Z0-9-]+\.[a-z0-9]{2,}$/
         if (!emailRegex.test(formData.email)) {
             alert("Please enter valid email!");
+        } else {
+            const contactId = contacts.length > 0 ? Math.max(...contacts.map(c => c.id)) : 0;
+            const newContact = {
+                id: contactId + 1,
+                name: formData.name,
+                email: formData.email,
+                phone: formData.phone,
+            }
+            setContacts([newContact, ...contacts]);
         }
-        const newContact = {
-            id: contactId,
-            name: formData.name,
-            email: formData.email,
-            phone: formData.phone,
-        }
-        setContacts([newContact, ...contacts]);
-        localStorage.setItem("contacts", JSON.stringify([newContact, ...contacts]));
-        setContactId(prev => prev + 1);
     }
 
     return (
