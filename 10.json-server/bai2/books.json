@@ -1,0 +1,32 @@
+{
+  "books": [
+    {
+      "id": "1",
+      "title": "To Kill a Mockingbird",
+      "author": "Harper Lee",
+      "publishedYear": 1960,
+      "genre": "Fiction"
+    },
+    {
+      "id": "2",
+      "title": "1984",
+      "author": "George Orwell",
+      "publishedYear": 1949,
+      "genre": "Dystopian"
+    },
+    {
+      "id": "3",
+      "title": "Moby",
+      "author": "Herman Melville",
+      "publishedYear": 1851,
+      "genre": "Adventure"
+    },
+    {
+      "id": "4",
+      "title": "Lập trình Python cơ bản",
+      "author": "Nguyễn Văn A",
+      "publishedYear": 2025,
+      "genre": "Programming"
+    }
+  ]
+}

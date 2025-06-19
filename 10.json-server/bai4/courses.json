@@ -1,0 +1,22 @@
+{
+  "courses": [
+    {
+      "id": 1,
+      "name": "JavaScript Basics",
+      "description": "An introduction to JavaScript programming language.",
+      "duration": "4 weeks"
+    },
+    {
+      "id": 2,
+      "name": "Advanced CSS",
+      "description": "Deep dive into CSS for advanced styling techniques.",
+      "duration": "3 weeks"
+    },
+    {
+      "id": 3,
+      "name": "React Fundamentals",
+      "description": "Learn the basics of React for building user interfaces.",
+      "duration": "5 weeks"
+    }
+  ]
+}

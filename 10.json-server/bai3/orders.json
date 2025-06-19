@@ -1,0 +1,28 @@
+{
+  "orders": [
+    {
+      "id": "2",
+      "customerName": "Jane Smith",
+      "product": "Smartphone",
+      "quantity": 1,
+      "price": 800,
+      "status": "Processing"
+    },
+    {
+      "id": "3",
+      "customerName": "Alice Johnson",
+      "product": "Tablet",
+      "quantity": 3,
+      "price": 600,
+      "status": "Delivered"
+    },
+    {
+      "id": "1",
+      "customerName": "John Rim",
+      "product": "Laptop",
+      "quantity": 2,
+      "price": 1500,
+      "status": "Shipped"
+    }
+  ]
+}
