@@ -1,0 +1,61 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Tommy",
+      "birthday": 1990
+    },
+    {
+      "id": "2",
+      "name": "Jerry",
+      "birthday": 1992
+    },
+    {
+      "id": "3",
+      "name": "Spike",
+      "birthday": 1988
+    },
+    {
+      "id": "4",
+      "name": "Tyke",
+      "birthday": 1995
+    },
+    {
+      "id": "5",
+      "name": "Butch",
+      "birthday": 1989
+    }
+  ],
+  "articles": [
+    {
+      "id": "1",
+      "title": "Article 1",
+      "content": "Content of article 1",
+      "authorId": "1"
+    },
+    {
+      "id": "2",
+      "title": "Article 2",
+      "content": "Content of article 2",
+      "authorId": "2"
+    },
+    {
+      "id": "3",
+      "title": "Article 3",
+      "content": "Content of article 3",
+      "authorId": "3"
+    },
+    {
+      "id": "4",
+      "title": "Article 4",
+      "content": "Content of article 4",
+      "authorId": "4"
+    },
+    {
+      "id": "5",
+      "title": "Article 5",
+      "content": "Content of article 5",
+      "authorId": "5"
+    }
+  ]
+}
