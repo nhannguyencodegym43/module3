@@ -15,7 +15,7 @@ function EditUser() {
                 const response = await axios.get(`http://localhost:3001/users/${id}`);
                 setUser(response.data);
             } catch (error) {
-                setUser(null);
+                alert(`Error fetching user details: ${error}`);
             }
         }
         fetchUser();
@@ -43,9 +43,11 @@ function EditUser() {
             return;
         }
         try {
+            const updatedArticles = [...user.articles, userArticle];
             await axios.patch(`http://localhost:3001/users/${id}`, {
-                articles: [...user.articles, userArticle]
+                articles: [...updatedArticles],
             })
+            setUser({...user, articles: updatedArticles});
             alert("Successfully updated user's articles");
             setUserArticle("");
         } catch (error) {
@@ -54,6 +56,7 @@ function EditUser() {
         }
     }
     if (user === null) return <p>User not found...</p>
+    if (!user.id) return <p>Loading...</p>;
     return (
         <>
             <h2>User detail</h2>
@@ -66,23 +69,27 @@ function EditUser() {
                 <input type="text" value={userArticle} onChange={(e) => setUserArticle(e.target.value)}/>
                 <button type="submit">Add</button>
             </form>
-            <table border={1}>
-                <thead>
-                <tr>
-                    <th>Articles</th>
-                    <th colSpan={2}>Actions</th>
-                </tr>
-                </thead>
-                <tbody>
-                {user.articles.map((article, index) => (
-                    <tr key={index}>
-                        <td>{article}</td>
-                        <td><Link to={`/users/edit/${id}/articles/${index}`}><button>Edit</button></Link></td>
-                        <td><button>Delete</button></td>
+            {user.articles.length === 0 ? (
+                <p>No articles found...</p>
+            ) : (
+                <table border={1}>
+                    <thead>
+                    <tr>
+                        <th>Articles</th>
+                        <th colSpan={2}>Actions</th>
                     </tr>
-                ))}
-                </tbody>
-            </table>
+                    </thead>
+                    <tbody>
+                    {user.articles.map((article, index) => (
+                        <tr key={index}>
+                            <td>{article}</td>
+                            <td><Link to={`/users/edit/${id}/articles/${index}`}><button>Edit</button></Link></td>
+                            <td><button>Delete</button></td>
+                        </tr>
+                    ))}
+                    </tbody>
+                </table>
+            )}
         </>
     )
 }

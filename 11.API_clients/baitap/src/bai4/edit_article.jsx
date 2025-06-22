@@ -2,6 +2,8 @@ import React, {useEffect} from "react";
 import {useNavigate, useParams} from "react-router-dom";
 import axios from "axios";
 function EditArticle() {
+    const [article, setArticle] = React.useState( "");
+    const navigate = useNavigate();
     const {index, id} = useParams();
     const [user, setUser] = React.useState({
         id: '',
@@ -24,23 +26,32 @@ function EditArticle() {
             setArticle(user.articles[index]);
         }
     },[user, index])
-    const [article, setArticle] = React.useState( "");
-    const navigate = useNavigate();
-    const updateArticle = async () => {
-        user.articles[Number(index)] = article;
-        await axios.patch(`http://localhost:3001/users/${id}`, {
-            articles: user.articles
-        })
-        setArticle("");
-        navigate(`/users/edit/${id}`);
+    const updateArticle = async (e) => {
+        e.preventDefault();
+        if (!article.trim()) {
+            alert("Please enter something");
+            return;
+        }
+        try {
+            const updatedArticles = [...user.articles];
+            updatedArticles[Number(index)] = article;
+            await axios.patch(`http://localhost:3001/users/${id}`, {
+                articles: updatedArticles
+            })
+            setArticle("");
+            navigate(`/users/edit/${id}`);
+        } catch (error) {
+            alert("Error updating article");
+        }
     }
+    if (user === null) return <p>User not found...</p>
     return (
         <>
             <h3>Update article to new title</h3>
-            <form>
+            <form onSubmit={updateArticle}>
                 <input type="text" value={article} onChange={e => setArticle(e.target.value)} />
-                <button onClick={updateArticle}>Update</button>
-                <button onClick={() => navigate(`/users/edit/${id}`)}>Cancel</button>
+                <button type="submit">Update</button>
+                <button type="button" onClick={() => navigate(`/users/edit/${id}`)}>Cancel</button>
             </form>
         </>
     )
