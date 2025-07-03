@@ -1,0 +1,113 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Laptop",
+      "price": 999.99,
+      "description": "Electronics",
+      "imageUrl": "https://images.unsplash.com/photo-1734779206772-f21d663e96d5?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "id": "2",
+      "name": "Smartphone",
+      "price": 499.99,
+      "description": "Electronics",
+      "imageUrl": "https://images.unsplash.com/photo-1739611216842-05e54af86ec7?q=80&w=859&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "id": "3",
+      "name": "Headphones",
+      "price": 199.99,
+      "description": "Accessories",
+      "imageUrl": "https://images.unsplash.com/photo-1741850821397-ed0e5d9bc125?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "id": "4",
+      "name": "Smartwatch",
+      "price": 299.99,
+      "description": "Wearables",
+      "imageUrl": "https://plus.unsplash.com/premium_photo-1750500612707-8cdf69be6947?q=80&w=887&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "id": "5",
+      "name": "Something",
+      "price": 123,
+      "description": "ThingSome",
+      "imageUrl": "https://images.unsplash.com/photo-1742853288141-b95880a1c5ea?q=80&w=875&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "id": "6",
+      "name": "Nguyễn Trung Nhân",
+      "price": "456",
+      "description": "haha",
+      "imageUrl": "https://images.unsplash.com/photo-1741802869522-3b4245d8aec9?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw0fHx8ZW58MHx8fHx8"
+    }
+  ],
+  "students": [
+    {
+      "id": "1",
+      "name": "Nguyễn Văn A",
+      "age": 20,
+      "email": "nguyenvana@gmail.com",
+      "major": "Computer Science"
+    },
+    {
+      "id": "2",
+      "name": "Trần Thị B",
+      "age": 22,
+      "email": "tranthib@apple.com",
+      "major": "Information Technology"
+    },
+    {
+      "id": "3",
+      "name": "Lê Văn C",
+      "age": 21,
+      "email": "levanc@outlook.com",
+      "major": "Software Engineering"
+    },
+    {
+      "id": "4",
+      "name": "Phạm Thị D",
+      "age": 23,
+      "email": "phamthid@meta.com",
+      "major": "Data Science"
+    }
+  ],
+  "blogs": [
+    {
+      "id": "1",
+      "title": "Understanding JavaScript Closures",
+      "content": "JavaScript closures are a powerful feature that allows functions to access variables from their outer scope even after the outer function has finished executing.",
+      "author": "John Doe",
+      "date": "2023-10-01"
+    },
+    {
+      "id": "2",
+      "title": "CSS Grid vs Flexbox: Which One to Use?",
+      "content": "CSS Grid and Flexbox are both powerful layout systems in CSS, but they serve different purposes. Grid is best for two-dimensional layouts, while Flexbox is ideal for one-dimensional layouts.",
+      "author": "Jane Smith",
+      "date": "2023-10-02"
+    },
+    {
+      "id": "3",
+      "title": "A Beginner's Guide to React",
+      "content": "React is a JavaScript library for building user interfaces. It allows developers to create reusable UI components and manage the state of their applications efficiently.",
+      "author": "Alice Johnson",
+      "date": "2023-10-03"
+    },
+    {
+      "id": "4",
+      "title": "Exploring Python's Data Science Libraries",
+      "content": "Python has become the go-to language for data science, thanks to libraries like Pandas, NumPy, and Matplotlib that make data manipulation and visualization easy.",
+      "author": "Bob Brown",
+      "date": "2023-10-04"
+    },
+    {
+      "id": "5",
+      "title": "Nhân nè",
+      "content": "Nguyễn Trung trời",
+      "author": "Kiên Trần á",
+      "date": "2025-07-03"
+    }
+  ]
+}
