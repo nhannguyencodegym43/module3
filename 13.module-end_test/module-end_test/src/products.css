@@ -1,0 +1,28 @@
+.products-table {
+    margin-top: 20px;
+}
+.products-table button {
+    border-radius: 6px;
+}
+.products-table th {
+    background-color: #afc1e6;
+}
+.add-btn {
+    background-color: #4CAF50;
+    border-radius: 6px;
+    margin-right: 2rem;
+}
+.products-container h1 {
+    margin-bottom: 1rem;
+}
+.search-input {
+    height: 2.7rem;
+}
+.delete-btn {
+    background-color: #d70000;
+    color: white;
+}
+.edit-btn {
+    background-color: #007BFF;
+    color: white;
+}
