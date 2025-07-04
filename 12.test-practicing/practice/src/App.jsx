@@ -12,6 +12,10 @@ import Blogs from "./bai3/blogs.jsx";
 import AddBlog from "./bai3/add_blog.jsx";
 import BlogDetails from "./bai3/blog_detail.jsx";
 import EditBlog from "./bai3/edit_blog.jsx";
+import Todos from "./bai4/todos.jsx";
+import AddTodo from "./bai4/add_todo.jsx";
+import TodoDetails from "./bai4/todo_details.jsx";
+import EditTodo from "./bai4/edit_todo.jsx";
 
 function App() {
 
@@ -32,10 +36,16 @@ function App() {
                 <Route path="/bai3/add" element={<AddBlog />} />
                 <Route path="/bai3/:id" element={<BlogDetails />} />
                 <Route path="/bai3/edit/:id" element={<EditBlog />} />
+
+                <Route path="/bai4" element={<Todos />} />
+                <Route path="/bai4/add" element={<AddTodo />} />
+                <Route path="/bai4/:id" element={<TodoDetails />} />
+                <Route path="/bai4/edit/:id" element={<EditTodo />} />
             </Routes>
             <Link to="/bai1">Bài 1</Link> <br/>
             <Link to="/bai2">Bài 2</Link> <br/>
             <Link to="/bai3">Bài 3</Link> <br/>
+            <Link to="/bai4">Bài 4</Link> <br/>
         </>
     )
 }

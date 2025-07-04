@@ -106,8 +106,45 @@
       "id": "5",
       "title": "Nhân nè",
       "content": "Nguyễn Trung trời",
-      "author": "Kiên Trần á",
+      "author": "Trần Trung á",
       "date": "2025-07-03"
+    }
+  ],
+  "todos": [
+    {
+      "id": "1",
+      "task": "Complete the project report",
+      "status": "completed",
+      "deadline": "2023-10-10",
+      "priority": "high"
+    },
+    {
+      "id": "2",
+      "task": "Attend the team meeting",
+      "status": "pending",
+      "deadline": "2023-10-05",
+      "priority": "medium"
+    },
+    {
+      "id": "3",
+      "task": "Review the code changes",
+      "status": "in-progress",
+      "deadline": "2023-10-07",
+      "priority": "low"
+    },
+    {
+      "id": "4",
+      "task": "Prepare for the presentation",
+      "status": "pending",
+      "deadline": "2023-10-12",
+      "priority": "high"
+    },
+    {
+      "id": "5",
+      "task": "practice for the test nè",
+      "status": "pending",
+      "deadline": "2025-07-05",
+      "priority": "medium"
     }
   ]
 }
