@@ -35,14 +35,10 @@ function AddProduct() {
 
     function handleValidate() {
         const newErrors = {};
-        if (
-            (!product.title.trim()) || (!product.price.trim()) || (!product.description.trim())
-        ) {
-            let fillMessage = "Hãy điền đầy đủ các ô!";
-            newErrors.title = fillMessage;
-            newErrors.price = fillMessage;
-            newErrors.description = fillMessage;
-        }
+        let fillMessage = "Hãy điền đầy đủ các ô!";
+        if (!product.title.trim()) newErrors.title = fillMessage;
+        if (!product.price.trim()) newErrors.price = fillMessage;
+        if (!product.description.trim()) newErrors.description = fillMessage;
         if (isNaN(product.price) || Number(product.price) < 0) newErrors.price = "Giá không hợp lệ!";
         return newErrors;
     }
